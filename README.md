@@ -18,7 +18,7 @@ By default (collectively known as `ENABLE_DEVELOPER_MODE`)
 It includes
 
  * a basic CLI example
- * examples for fuzz, unit, and constexpr testing
+ * examples for unit, and constexpr testing
  * large GitHub action testing matrix
 
 It requires
@@ -55,9 +55,5 @@ Now you can clone the project locally and get to work!
 ## Testing
 
 See [Catch2 tutorial](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md)
-
-## Fuzz testing
-
-See [libFuzzer Tutorial](https://github.com/google/fuzzing/blob/master/tutorial/libFuzzerTutorial.md)
 
 
