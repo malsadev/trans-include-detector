@@ -18,7 +18,7 @@ By default (collectively known as `ENABLE_DEVELOPER_MODE`)
 It includes
 
  * a basic CLI example
- * examples for unit, and constexpr testing
+ * examples for unit tests
  * large GitHub action testing matrix
 
 It requires
