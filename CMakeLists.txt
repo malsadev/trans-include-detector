@@ -69,18 +69,8 @@ endif()
 include(CTest)
 
 if(BUILD_TESTING)
-  message(AUTHOR_WARNING "Building Tests. Be sure to check out test/constexpr_tests.cpp for constexpr testing")
+  message(AUTHOR_WARNING "Building Tests")
   add_subdirectory(test)
-endif()
-
-
-if(trans_include_detector_BUILD_FUZZ_TESTS)
-  message(AUTHOR_WARNING "Building Fuzz Tests, using fuzzing sanitizer https://www.llvm.org/docs/LibFuzzer.html")
-  if (NOT trans_include_detector_ENABLE_ADDRESS_SANITIZER AND NOT trans_include_detector_ENABLE_THREAD_SANITIZER)
-    message(WARNING "You need asan or tsan enabled for meaningful fuzz testing")
-  endif()
-  add_subdirectory(fuzz_test)
-
 endif()
 
 # If MSVC is being used, and ASAN is enabled, we need to set the debugger environment
