@@ -1,5 +1,4 @@
 include(cmake/SystemLink.cmake)
-include(cmake/LibFuzzer.cmake)
 include(CMakeDependentOption)
 include(CheckCXXCompilerFlag)
 
@@ -77,15 +76,6 @@ macro(trans_include_detector_setup_options)
       trans_include_detector_ENABLE_PCH
       trans_include_detector_ENABLE_CACHE)
   endif()
-
-  trans_include_detector_check_libfuzzer_support(LIBFUZZER_SUPPORTED)
-  if(LIBFUZZER_SUPPORTED AND (trans_include_detector_ENABLE_SANITIZER_ADDRESS OR trans_include_detector_ENABLE_SANITIZER_THREAD OR trans_include_detector_ENABLE_SANITIZER_UNDEFINED))
-    set(DEFAULT_FUZZER ON)
-  else()
-    set(DEFAULT_FUZZER OFF)
-  endif()
-
-  option(trans_include_detector_BUILD_FUZZ_TESTS "Enable fuzz testing executable" ${DEFAULT_FUZZER})
 
 endmacro()
 
